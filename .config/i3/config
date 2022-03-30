@@ -226,8 +226,11 @@ for_window [class="TelegramDesktop"] floating enable resize set 1080 720
 for_window [instance="crx_pjibgclleladliembfgfagdaldikeohf"] move to workspace $ws6
 for_window [class="mpv"] floating enable resize set 640 480
 for_window [title="Picture-in-Picture"] sticky enable
+for_window [title="^Android Emulator*"] floating enable
+for_window [class="QT*"] move to workspace $ws3
+for_window [class="app.py"] move to workspace $ws3 floating enable
 
-# autostart
+#for_window [title="^Android Emulator*"] floating enable autostart
 exec_always --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 exec_always nitrogen --restore &

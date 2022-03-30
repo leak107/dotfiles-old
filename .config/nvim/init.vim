@@ -10,6 +10,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
+Plug 'neovim/nvim-lspconfig'
+
+
 " Plug 'airblade/vim-gitgutter'
 Plug 'qpkorr/vim-bufkill'
 Plug 'SirVer/ultisnips'
