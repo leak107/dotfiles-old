@@ -219,6 +219,7 @@ assign [class="GNS3"] $ws3
 assign [class="Steam"] $ws7
 assign [class="Insomnia"] $ws3
 assign [class="mpv"] $ws3
+assign [class="Google-chrome"] $ws3
 
 # floating
 for_window [class="firefox"] move to workspace $ws2
@@ -373,3 +374,9 @@ mode "$mode_gaps_left" {
 # Please remove the following exec line:
 #######################################################################
 #exec i3-config-wizard
+
+
+
+## FOR DISPLAY
+##  xrandr --output HDMI1 --auto --right-of eDP1
+
