@@ -29,6 +29,10 @@ return packer.startup(function (use)
     use 'Shatur/neovim-ayu'
     use 'folke/tokyonight.nvim'
     use { "ellisonleao/gruvbox.nvim" }
+    use 'rakr/vim-one'
+    use 'EdenEast/nightfox.nvim'
+    use 'rose-pine/neovim'
+    use 'catppuccin/nvim'
 
     -- Completion
     use 'hrsh7th/nvim-cmp'
@@ -87,8 +91,10 @@ return packer.startup(function (use)
     -- Blankline
     use "lukas-reineke/indent-blankline.nvim"
 
-    use 'norcalli/nvim-colorizer.lua'
     use 'mrshmllow/document-color.nvim'
+
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

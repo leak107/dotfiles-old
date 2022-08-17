@@ -4,9 +4,19 @@ if not lualine_status then
   return
 end
 
+local theme
+
+local color = vim.cmd[[color]]
+
+if color == 'one' then
+  theme = 'onedark'
+elseif color == 'ayu-mirage' then
+  theme = 'ayu-mirage'
+end
+
 lualine.setup {
   options = {
-    theme = "ayu_mirage",
+    theme = 'catppuccin',
     icons_enabled = true,
     component_separators = { left = '|', right = '|'},
     section_separators = { left = '', right = ''},
@@ -26,7 +36,12 @@ lualine.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {
+      {
+        'filename',
+        path = 1,
+      }
+    },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
@@ -40,8 +55,8 @@ lualine.setup {
     lualine_z = {}
   },
   tabline = {
-    lualine_b = {'filename', 'diagnostics'},
-    lualine_c = {'filetype'},
+    -- lualine_b = {'filename', 'diagnostics'},
+    -- lualine_c = {'filetype'},
   },
   winbar = {},
   inactive_winbar = {},

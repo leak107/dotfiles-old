@@ -39,12 +39,16 @@ keymap('n', '<Leader>lr', ':luafile %<CR>', opts) -- Lua re-source
 -- Edit nvim config
 keymap('n', '<Leader>ev', ':tabedit ~/.config/nvim/init.lua<CR>', opts)
 
--- Navigate buffers
--- keymap('n', '<S-h>', 'gT<CR>', opts)
--- keymap('n', '<S-l>', 'gt<CR>', opts)
+-- Navigate tabs
+keymap('n', '<S-h>', 'gT<CR>', opts)
+keymap('n', '<S-l>', 'gt<CR>', opts)
 
-keymap('n', '<S-h>', ':bprev<CR>', opts)
-keymap('n', '<S-l>', ':bnext<CR>', opts)
+-- keymap('n', '<S-h>', ':bprev<CR>', opts)
+-- keymap('n', '<S-l>', ':bnext<CR>', opts)
+
+-- Bufferline navigation
+keymap('n', '[b', ':BufferLineCycleNext<CR>', opts)
+keymap('n', 'b]', ':BufferLineCyclePrev<CR>', opts)
 
 -- Visual
 -- Stay in indent mode
@@ -75,6 +79,7 @@ keymap("n", "<Leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR
 keymap("n", "<Leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 keymap("n", "<Leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 keymap("n", "<Leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
+keymap("n", "<Leader>fc", "<cmd>lua require('telescope.builtin').colorscheme()<CR>", opts)
 
 -- Toggle Document Color
 keymap('n', '<Leader>tc', "<cmd>lua require('document-color').buf_toggle()<CR>", opts)
