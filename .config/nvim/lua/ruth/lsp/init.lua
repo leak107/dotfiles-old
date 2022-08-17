@@ -4,6 +4,6 @@ if not lsp_status_ok then
   return
 end
 
-require("user.lsp.mason")
-require("user.lsp.handlers").setup()
+require("ruth.lsp.mason")
+require("ruth.lsp.handlers").setup()
 -- require("user.lsp.null-ls")

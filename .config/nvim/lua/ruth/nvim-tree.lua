@@ -40,7 +40,7 @@ nvimtree.setup {
     width = 30,
     height = 30,
     hide_root_folder = false,
-    side = "left",
+    side = "right",
     number = false,
     relativenumber = false,
   },

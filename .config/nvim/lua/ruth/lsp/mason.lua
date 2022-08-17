@@ -15,8 +15,8 @@ local defaultLSPConfig = {
   flags = {
     debounce_text_changes = 150,
   },
-  on_attach = require("user.lsp.handlers").on_attach,
-  capabilities = require("user.lsp.handlers").capabilities,
+  on_attach = require("ruth.lsp.handlers").on_attach,
+  capabilities = require("ruth.lsp.handlers").capabilities,
 }
 
 mason.setup()
@@ -30,7 +30,7 @@ mason_lsp.setup({
     'intelephense',
     'vue-language-server',
   },
-  automatic_installation = false
+  automatic_installation = true
 })
 
 mason_lsp.setup_handlers {
@@ -45,7 +45,7 @@ mason_lsp.setup_handlers {
     lspconfig.sumneko_lua.setup(
       vim.tbl_extend(
         "force",
-        require('user.lsp.config.sumneko'),
+        require('ruth.lsp.config.sumneko'),
         defaultLSPConfig
       )
     )
@@ -54,7 +54,7 @@ mason_lsp.setup_handlers {
     lspconfig.jsonls.setup(
       vim.tbl_extend(
         "force",
-        require('user.lsp.config.jsonls'),
+        require('ruth.lsp.config.jsonls'),
         defaultLSPConfig
       )
     )
@@ -63,7 +63,7 @@ mason_lsp.setup_handlers {
     lspconfig.emmet_ls.setup(
       vim.tbl_extend(
         "force",
-        require('user.lsp.config.emmet'),
+        require('ruth.lsp.config.emmet'),
         defaultLSPConfig
       )
     )
@@ -73,7 +73,7 @@ mason_lsp.setup_handlers {
     lspconfig.html.setup(
       vim.tbl_extend(
         "force",
-        require('user.lsp.config.html'),
+        require('ruth.lsp.config.html'),
         defaultLSPConfig
       )
     )
