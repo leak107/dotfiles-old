@@ -76,9 +76,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope 
 keymap("n", "<Leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+-- For searching git ignored files
+keymap("n", "<Leader>fh", "<cmd>lua require('telescope.builtin').find_files{no_ignore = true, hidden = true}<CR>", opts)
 keymap("n", "<Leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 keymap("n", "<Leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
-keymap("n", "<Leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
+-- keymap("n", "<Leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 keymap("n", "<Leader>fc", "<cmd>lua require('telescope.builtin').colorscheme()<CR>", opts)
 
 -- Toggle Document Color
