@@ -22,13 +22,13 @@ local defaultLSPConfig = {
 mason.setup()
 mason_lsp.setup({
   ensure_installed = {
-    'lua-language-server',
-    'html-lsp',
-    'css-lsp',
-    'eslint-lsp',
-    'tailwindcss-language-server',
+    'sumneko_lua',
+    'html',
+    'cssls',
+    'tailwindcss',
+    'eslint',
     'intelephense',
-    'vue-language-server',
+    'volar',
   },
   automatic_installation = true
 })

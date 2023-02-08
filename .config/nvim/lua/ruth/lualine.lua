@@ -6,7 +6,7 @@ end
 
 local theme
 
-local color = vim.cmd[[color]]
+-- local color = vim.cmd[[color]]
 
 if color == 'one' then
   theme = 'onedark'

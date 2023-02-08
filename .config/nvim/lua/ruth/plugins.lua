@@ -77,7 +77,7 @@ return packer.startup(function (use)
     use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     -- Gitsign
-    use { 'lewis6991/gitsigns.nvim', tag = 'release'}
+    use { 'lewis6991/gitsigns.nvim'}
 
     -- Nvim-tree
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' }}
